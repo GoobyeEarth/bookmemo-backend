@@ -44,7 +44,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            make python-test
+            make test
             make flake
 
       - store_artifacts:
