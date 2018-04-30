@@ -14,5 +14,4 @@ class AccountSerializer(serializers.ModelSerializer):
         fields = ('id', 'username', 'email', 'password')
 
     def create(self, validated_data):
-        return User.objects.create_user(validated_data['username'][0], validated_data['email'][0]
-                                        , validated_data['password'][0])
+        return User.objects.create_user(validated_data['username'][0], validated_data['email'][0], validated_data['password'][0])
