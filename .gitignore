@@ -103,3 +103,6 @@ ENV/
 # sqlite file
 db.sqlite3
 
+# pycharm
+.idea/workspace.xml
+

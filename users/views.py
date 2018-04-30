@@ -1,19 +1,13 @@
-from django.contrib.auth import authenticate
-from rest_framework import authentication, permissions, generics
-from rest_framework_jwt.settings import api_settings
-from rest_framework.exceptions import AuthenticationFailed
-from rest_framework.response import Response
-from django.db import transaction
-from django.http import HttpResponse, Http404
-
-from rest_framework import status, viewsets, filters
-from rest_framework.views import APIView
-
-from .serializer import AccountSerializer
 from django.contrib.auth.models import User
+from django.db import transaction
+from rest_framework import generics
+from rest_framework import permissions
+from rest_framework.response import Response
+from rest_framework import status
+
+from users.serializer import AccountSerializer
 
 
-# ユーザ作成のView(POST)
 class AuthRegister(generics.CreateAPIView):
     permission_classes = (permissions.AllowAny,)
     queryset = User.objects.all()

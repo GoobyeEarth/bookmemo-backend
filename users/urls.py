@@ -1,6 +1,5 @@
-from django.conf.urls import include, url
-from rest_framework import routers
-from .views import AuthRegister
+from django.conf.urls import url
+from users.views import AuthRegister
 
 urlpatterns = [
     url(r'^register/$', AuthRegister.as_view()),
