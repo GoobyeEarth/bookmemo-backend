@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_jwt',
     'users',
+    'books',
+    'memos',
 ]
 
 MIDDLEWARE = [
